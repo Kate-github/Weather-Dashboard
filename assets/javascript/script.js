@@ -19,7 +19,7 @@ $("#cities-List").on('click', 'li', function(){
 });
 
 function preformSearch(searchTxt) {
-    const locationApiUrl = `http://api.openweathermap.org/geo/1.0/direct?q=${searchTxt}&limit=1&appid=${apiKey}`;
+    const locationApiUrl = `https://api.openweathermap.org/geo/1.0/direct?q=${searchTxt}&limit=1&appid=${apiKey}`;
     fetch(locationApiUrl)
         .then(response => response.json())
         .then((data) => {
