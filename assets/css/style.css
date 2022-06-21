@@ -1,9 +1,4 @@
 .card {
-    width: 150px;
-    height: 150px;
-    margin: 0.5rem;
-    border: solid 1px gray;
-    border-radius: 2px;
     padding: 5px;
     background-color: rgb(51, 71, 51);
     color: white;
@@ -42,7 +37,7 @@
 
 #fiveDayForecast {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
 .hidden {
@@ -52,10 +47,14 @@
 #cities-list li {
     cursor: pointer;
     background-color: lightgrey;
-    padding:5px;
+    padding: 5px;
     text-align: center;
 }
 
 #cities-list {
     gap: 5px;
+}
+
+#fiveDayForecast .card {
+    flex-grow: 1;
 }

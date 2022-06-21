@@ -102,25 +102,21 @@ function displayWeather(weatherData) {
         currentDate.setDate(currentDate.getDate() + (1));
         const dailyWeather = weatherData.daily[i];
         let htmlString = `
-        <div class="row">
-            <div class="col-lg-5"> 
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">${currentDate.toDateString()}</h5>
-                    <div>
-                        <strong>Temp:</strong>
-                        <span>${dailyWeather.temp.day} &deg;F</span>
-                    </div>
-                    <div>
-                        <strong>Wind:</strong>
-                        <span>${dailyWeather.wind_speed} MPH</span>
-                    </div>
-                    <div>
-                        <strong>Humidity:</strong>
-                        <span>${dailyWeather.humidity} %</span>
-                    </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">${currentDate.toDateString()}</h5>
+                <div>
+                    <strong>Temp:</strong>
+                    <span>${dailyWeather.temp.day} &deg;F</span>
                 </div>
-            </div>
+                <div>
+                    <strong>Wind:</strong>
+                    <span>${dailyWeather.wind_speed} MPH</span>
+                </div>
+                <div>
+                    <strong>Humidity:</strong>
+                    <span>${dailyWeather.humidity} %</span>
+                </div>
             </div>
         </div>`;
         
