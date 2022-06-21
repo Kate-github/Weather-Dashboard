@@ -47,7 +47,7 @@ function displayRecentCities() {
     let html = [];
     for (let i = recentCities.length; i > 0; i--) {
         let cityName = recentCities[i-1];
-        html.push(`<li>${cityName}</li>`)
+        html.push(`<li class="nav-item">${cityName}</li>`)
     }
     console.log(html.join(''));
     $('#cities-List').html(html.join(''));
@@ -104,7 +104,7 @@ function displayWeather(weatherData) {
         let htmlString = `
         <div class="row">
             <div class="col-lg-5"> 
-            <div class="card" style="width: 15 rem;">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">${currentDate.toDateString()}</h5>
                     <div>
