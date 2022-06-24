@@ -92,9 +92,19 @@ function displayCity(data) {
 
 function displayWeather(weatherData) {
     hideLoadingMsg();
+    let uviStatus = 'favorable';
+    if (weatherData.current.uvi > 2) {
+        uviStatus = 'moderate';
+    } else if (weatherData.current.uvi > 8){
+        uviStatus = 'severe';
+    }
+
+
     $('#lblTemp').html(weatherData.current.temp + ' &deg;F');
     $('#lblWind').html(weatherData.current.wind_speed + ' MPH');
     $('#lblUvIndex').html(weatherData.current.uvi);
+    $('#lblUvIndex').removeAttr('class');
+    $('#lblUvIndex').addClass(uviStatus);
     $('#lblHumidity').html(weatherData.current.humidity + ' %');
     let currentDate = new Date();
     $('#fiveDayForecast').html("");

@@ -58,3 +58,19 @@
 #fiveDayForecast .card {
     flex-grow: 1;
 }
+#lblUvIndex {
+    display: inline-block;
+    padding: 0 5px;
+}
+.severe {
+    background-color: red;
+    color:white;
+}
+.favorable {
+    background-color: green;
+    color:white;
+}
+.moderate {
+    background-color: goldenrod;
+    color:black;
+}
